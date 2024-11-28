@@ -10,8 +10,8 @@ body{
 
 .card {
     align-items: center;
-    width: 20em;
-    height: 27.5em;
+    width: 23em;
+    height: 30.15em;
     background: #240046;
     transition: 1s ease-in-out;
     clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
@@ -30,7 +30,7 @@ body{
     color: #be95be;
     text-align: center;
     display: block;
-    font-size: 1em;
+    font-size: 1.25em;
   }
   
   .card .info {
@@ -38,8 +38,13 @@ body{
     color: white;
     display: block;
     text-align: center;
-    font-size: 0.72em;
+    font-size: 0.92em;
     margin: 1em;
+  }
+  .card .add-on{
+    font-style: italic;
+    font-size: 1.0em;
+
   }
   
   .card .img {
@@ -62,16 +67,17 @@ body{
     gap: 1em;
   }
   
-  .card a {
+  .card #icon {
     color: white;
     transition: .4s ease-in-out;
   }
   
-  .card a:hover {
+  .card #icon:hover {
     color: #be95be;
   }
   
   .card button {
+    bottom: 1 4em;
     padding: 0.8em 1.7em;
     display: block;
     margin: auto;
@@ -90,7 +96,7 @@ body{
   }
 
 
-  #sketch-container{
+  #sketch-container .p5Canvas{
     left: 10em;
     bottom: 120px;
     position: absolute;
@@ -99,4 +105,27 @@ body{
     height: 80%;
     max-height: 500px;
     border-radius: 15px;
+  }
+
+  #sketch-container2 .p5Canvas{
+    left: 58em;
+    bottom: 120px;
+    position: absolute;
+    width: 80%;
+    max-width: 500px;
+    height: 80%;
+    max-height: 500px;
+    border-radius: 15px;
+  }
+
+  @media only screen and (max-width: 1000px){
+    #sketch-container .p5Canvas{
+      width: 110px !important;
+      height: 80% !important;
+      bottom: 23em;
+
+    }
+    #sketch-container2{
+      display: none;
+    }
   }
