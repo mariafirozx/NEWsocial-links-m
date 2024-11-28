@@ -31,6 +31,6 @@ const downloadResume = (fileName) => {
 
 window.addEventListener('DOMContentLoaded', (e) =>{
     const btn = document.querySelector('#btn');
-    btn.addEventListener('click', downloadResume('resume.pdf'));
+    btn.addEventListener('click', downloadResume('Marya Fairoz - Resume.pdf'));    
 
 })

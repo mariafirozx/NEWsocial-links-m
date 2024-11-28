@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Parkinsans:wght@300..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
   padding: 0;
   margin: 0;
@@ -118,6 +120,19 @@ body{
     border-radius: 15px;
   }
 
+  .footer{
+    font-size: 13px;
+    font-weight: 500px;
+    font-family: "Parkinsans", sans-serif;
+    position: absolute;
+    bottom: 2em;
+    left: 52em;
+    max-width: fit-content;
+    margin-inline: auto;
+    justify-content: center;
+    z-index: 10;
+  }
+
   @media only screen and (max-width: 600px){
     #sketch-container .p5Canvas{
      display: none;
@@ -125,5 +140,11 @@ body{
     }
     #sketch-container2 .p5Canvas{
       display: none;
+    }
+    .footer{
+      font-size: 10px;
+      font-weight: 500px;
+      left: 17em;
+      bottom: .1em;
     }
   }
