@@ -8,6 +8,8 @@
 
 body{
   background-color:#b8c0ff;
+  opacity: 0;
+  transition: opacity 3s;
 }
 
 .card {
