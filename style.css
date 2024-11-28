@@ -118,14 +118,12 @@ body{
     border-radius: 15px;
   }
 
-  @media only screen and (max-width: 1000px){
+  @media only screen and (max-width: 600px){
     #sketch-container .p5Canvas{
-      width: 110px !important;
-      height: 80% !important;
-      bottom: 23em;
+     display: none;
 
     }
-    #sketch-container2{
+    #sketch-container2 .p5Canvas{
       display: none;
     }
   }
