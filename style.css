@@ -77,15 +77,18 @@ body{
   }
   
   .card #icon {
+    cursor: pointer;
     color: white;
+    z-index: 20;
     transition: .4s ease-in-out;
   }
   
   .card #icon:hover {
+    cursor: pointer;
     color: #be95be;
   }
   
-  .card button {
+  .card #btn {
     bottom: 1 4em;
     padding: 0.8em 1.7em;
     display: block;
@@ -95,13 +98,15 @@ body{
     font-weight: bold;
     background: #ffffff;
     color: rgb(0, 0, 0);
+    z-index: 20;
     transition: .4s ease-in-out;
   }
   
-  .card button:hover {
+  .card #btn:hover {
     background: #be95be;
     color: white;
     cursor: pointer;
+    z-index: 20;
   }
 
   .tree-container {
@@ -165,6 +170,12 @@ body{
   z-index: 10; 
   }
 
+  .tree-container, .footer {
+    pointer-events: none; /* Prevent interference */
+  }
+  .card #icon, .card #btn {
+    pointer-events: auto;
+  }
   @media only screen and (max-width: 600px){
     #sketch-container .p5Canvas{
      display: none;
