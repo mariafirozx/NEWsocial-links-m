@@ -4,7 +4,7 @@
 
 const downloadResume = (fileName) => {
     return function(){
-        var url = "Files/" + fileName;
+        var url = fileName;
         var request = new XMLHttpRequest();
         request.open("GET", url, true);
         request.responseType = "blob";
