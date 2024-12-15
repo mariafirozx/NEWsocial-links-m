@@ -1,3 +1,5 @@
+
+
 // //resume download PDF => 
 
 const downloadResume = (fileName) => {
@@ -28,9 +30,9 @@ const downloadResume = (fileName) => {
 }
 
 // const btn = document.querySelector('#btn');
+const btn = document.querySelector('#btn');
 
 window.addEventListener('DOMContentLoaded', (e) =>{
-    const btn = document.querySelector('#btn');
-    btn.addEventListener('click', downloadResume('Marya Fairoz - Resume.pdf'));    
+    btn.addEventListener('click', )    
 
 })

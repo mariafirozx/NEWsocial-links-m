@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "pdf.js-viewer": "^0.2.8"
+  }
+}
