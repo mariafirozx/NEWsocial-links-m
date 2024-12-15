@@ -33,6 +33,6 @@ const downloadResume = (fileName) => {
 const btn = document.querySelector('#btn');
 
 window.addEventListener('DOMContentLoaded', (e) =>{
-    btn.addEventListener('click', )    
+    btn.addEventListener('click', PDFJS.webViewerLoad('Marya Fairoz - Resume.pdf'))    
 
 })
