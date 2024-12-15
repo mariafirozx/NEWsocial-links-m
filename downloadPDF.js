@@ -9,30 +9,27 @@ const downloadResume = (fileName) => {
         request.open("GET", url, true);
         request.responseType = "blob";
         request.onload = function(){
-            var blob = new Blob([request.response], {type: "application/octetstream"});
-            var isIE = false || !!document.documentMode;
-            if(isIE){
-                window.navigator.msSaveBlob(blob, fileName);
+            if(request.status === 200){
+                var blob = new Blob([request.response], {type: "application/pdf"});
+                var blobURL = window.URL.createObjectURL(blob);
+                window.open(blobURL, "_blank");
             }else{
-                var url = window.URL || window.webkitURL;
-                link = url.createObjectURL(blob);
-                var a = document.createElement("a");
-                a.setAttribute("download", fileName);
-                a.setAttribute("href", link);
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                
+                console.error("Failed to load file"+ request.status);
             }
+           
     };
+    request.onerror = function(){
+        console.error("error while fetching file");
+    };
+
     request.send();
-    }
+  }
 }
 
 // const btn = document.querySelector('#btn');
 const btn = document.querySelector('#btn');
 
 window.addEventListener('DOMContentLoaded', (e) =>{
-    btn.addEventListener('click', PDFJS.webViewerLoad('Marya Fairoz - Resume.pdf'))    
+    btn.addEventListener('click', downloadResume('Marya Fairoz - Resume.pdf'))    
 
 })
